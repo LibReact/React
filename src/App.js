@@ -2,6 +2,8 @@ import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import Frase from './components/Frase';
 import List from './components/List';
+import Evento from './components/Evento';
+import Form from './components/Form';
 
 function App() {
 
@@ -9,6 +11,9 @@ function App() {
 
   return (
     <div className="App">
+      <Form />
+      <Evento numero="1"/>
+      <Evento numero="2"/>
       <Frase />
       <h1>Testando css</h1>
       <SayMyName nome={nome} />
