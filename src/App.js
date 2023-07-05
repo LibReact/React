@@ -1,5 +1,6 @@
 import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
+import Frase from './components/Frase';
 
 function App() {
 
@@ -7,8 +8,8 @@ function App() {
 
   return (
     <div className="App">
-      <SayMyName nome="Bruno" />
-      <SayMyName nome="Jose" />
+      <Frase />
+      <h1>Testando css</h1>
       <SayMyName nome={nome} />
       <Pessoa nome="Antonio" idade="30" profissao="Programador" foto="https://via.placeholder.com/150" />
     </div>
