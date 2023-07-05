@@ -1,3 +1,4 @@
+// styles é um objeto com as classes css definidas no arquivo importado
 import styles from './Frase.module.css'
 
 export default function Frase(props) {
