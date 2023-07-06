@@ -1,39 +1,23 @@
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import Frase from './components/Frase';
-import List from './components/List';
-import Evento from './components/Evento';
-import Form from './components/Form';
-import Condicional from './components/Condicional';
-import OutraLista from './components/OutraLista';
-import { useState } from 'react';
-import SeuNome from './components/SeuNome';
-import Saudacao from './components/Saudacao';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+
+import Home from './pages/Home';
+import Contato from './pages/Contato';
+import Empresa from './pages/Empresa';
 
 function App() {
-
-  const [nome1, setNome] = useState();
   
-  const meusItens = ['React', 'Vue', 'Angular'];
-
-  const nome = "Lima";
-
   return (
-    <div className="App">
-      <SeuNome setNome={setNome} />
-      <Saudacao nome={nome1} />
-      <OutraLista  itens={meusItens}/>
-      <OutraLista  itens={[]}/>
-      <Condicional />
-      <Form />
-      <Evento numero="1"/>
-      <Evento numero="2"/>
-      <Frase />
-      <h1>Testando css</h1>
-      <SayMyName nome={nome} />
-      <Pessoa nome="Antonio" idade="30" profissao="Programador" foto="https://via.placeholder.com/150" />
-      <List />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/empresa' element={<Empresa/>} />
+        <Route path='/contato' element={<Contato/>} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
