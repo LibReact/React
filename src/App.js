@@ -6,8 +6,13 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista';
+import { useState } from 'react';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 function App() {
+
+  const [nome1, setNome] = useState();
   
   const meusItens = ['React', 'Vue', 'Angular'];
 
@@ -15,6 +20,8 @@ function App() {
 
   return (
     <div className="App">
+      <SeuNome setNome={setNome} />
+      <Saudacao nome={nome1} />
       <OutraLista  itens={meusItens}/>
       <OutraLista  itens={[]}/>
       <Condicional />
